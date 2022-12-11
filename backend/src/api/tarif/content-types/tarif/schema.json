@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tarifs",
+  "info": {
+    "singularName": "tarif",
+    "pluralName": "tarifs",
+    "displayName": "Tarif",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

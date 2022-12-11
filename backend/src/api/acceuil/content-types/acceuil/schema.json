@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "acceuils",
+  "info": {
+    "singularName": "acceuil",
+    "pluralName": "acceuils",
+    "displayName": "acceuil"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
