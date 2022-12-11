@@ -1,0 +1,49 @@
+.cardPrices {
+  overflow: hidden;
+  width: 85vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  @include border;
+  box-shadow: 10px 11px 10px -2px $color2;
+  margin: 5%;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  h2 {
+    display: flex;
+    justify-content: center;
+    width: 85vw;
+    background-color: $color4;
+    text-shadow: 4px 3px 5px $color1;
+    color: white;
+    align-items: center;
+    height: 10vh;
+  }
+}
+.text_card {
+  background-color: rgba($color2, 0.8);
+  padding: 5%;
+  width: 85vw;
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 375px) {
+  .cardPrices {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cardPrices {
+    margin: 2%;
+    width: 45vw;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .cardPrices {
+    margin: 2%;
+    width: 25vw;
+  }
+}

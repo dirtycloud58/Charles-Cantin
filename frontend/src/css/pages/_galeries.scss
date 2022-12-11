@@ -1,0 +1,137 @@
+@import "../config";
+
+.container_galeries {
+  width: 100vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-top: 5vh;
+}
+
+.cardGaleries {
+  margin-bottom: 2%;
+  width: 90vw;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include border;
+}
+
+.galeries {
+  width: 100vw;
+}
+.search {
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+  z-index: 2;
+}
+.nav_categories {
+  background-color: $color1;
+  label {
+    cursor: pointer;
+    line-height: 5vh;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+}
+
+.reset_none,
+#cat_toggle {
+  display: none;
+}
+
+.galeries_pages {
+  display: flex;
+}
+
+.galeries_pages_none {
+  display: none;
+}
+
+.reset {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  z-index: 3;
+  right: 3vw;
+  top: 12vh;
+  button {
+    background-color: $color3;
+    border: 3px solid white;
+    color: $color1;
+    width: 20vw;
+    height: 4vh;
+    @include border;
+    &:hover {
+      cursor: pointer;
+      border-color: $color1;
+    }
+  }
+}
+
+.coup_de_coeur {
+  width: 100vw;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  h1,
+  p {
+    text-align: center;
+    width: 80vw;
+  }
+  p {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+.coup_de_coeur_none {
+  visibility: hidden;
+  height: 2vh;
+}
+
+.pivot {
+  transform: rotate(90deg);
+  vertical-align: middle;
+  width: 25px;
+}
+.pivot_open {
+  transform: rotate(-90deg);
+  vertical-align: middle;
+  width: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .reset {
+    top: auto;
+    right: 2vw;
+    //left: 50%;
+    //transform: translateX(-50%);
+    button {
+      width: 12vw;
+      height: 5vh;
+    }
+  }
+  .small_card {
+    margin: 2%;
+    width: 15vw;
+    height: 15vh;
+    background-position: center;
+    background-size: cover;
+    @include border;
+  }
+  .coup_de_coeur {
+    p {
+      width: 50vw;
+      padding-top: 1%;
+      padding-bottom: 1%;
+    }
+  }
+  .coup_de_coeur_none {
+    display: none;
+  }
+}

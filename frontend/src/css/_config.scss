@@ -1,0 +1,37 @@
+$color1: rgb(71, 85, 94);
+$color2: rgb(186, 191, 195);
+$color4: rgba(102, 188, 242, 0.8);
+$color3: rgb(242, 173, 78);
+
+@mixin border {
+  border-radius: 10px;
+}
+@mixin transition($transition-property, $transition-time, $method) {
+  transition: $transition-property $transition-time $method;
+}
+@mixin enhanceAnimations() {
+  transform: translate3d(0, 0, 0);
+}
+@mixin box-sizing($box-model) {
+  box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  background-clip: padding-box;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+@mixin hideScroll() {
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@mixin contentWidth($container-width) {
+  width: $container-width;
+}

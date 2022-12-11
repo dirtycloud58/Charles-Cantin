@@ -1,0 +1,95 @@
+@import "../config";
+
+.navbar {
+  display: flex;
+  position: fixed;
+  background: $color1;
+  width: 100vw;
+  height: 10vh;
+  z-index: 5;
+}
+.nav_menu {
+  width: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav_label {
+  display: flex;
+  height: 10vh;
+  padding-right: 5vw;
+  cursor: pointer;
+  img {
+    margin: auto;
+    &:focus,
+    &:hover {
+      animation: wobble 2s;
+    }
+
+    @keyframes wobble {
+      20% {
+        transform: rotate(45deg);
+      }
+      40% {
+        transform: rotate(-45deg);
+      }
+      60% {
+        transform: rotate(45deg);
+      }
+      80% {
+        transform: rotate(-45deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.social {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  img {
+    width: 35px;
+    height: 35px;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    cursor: pointer;
+  }
+}
+.logo {
+  width: 20vw;
+  img {
+    padding-top: 1vh;
+    padding-left: 5%;
+    height: 8vh;
+  }
+}
+
+#menu_toggle {
+  display: none;
+}
+
+.main_pages {
+  display: flex;
+}
+
+.main_pages_none {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .social {
+    width: 20vw;
+    justify-content: center;
+  }
+  .nav_menu {
+    width: 60vw;
+  }
+  .main_pages {
+    display: flex;
+  }
+}

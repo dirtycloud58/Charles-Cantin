@@ -1,0 +1,132 @@
+@import "components/nav";
+@import "components/footer";
+@import "pages/home";
+@import "pages/prices";
+@import "pages/galeries";
+@import "pages/contact";
+@import "components/carousel";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+h1,
+h2 {
+  text-align: center;
+}
+
+.galeries,
+.home,
+.prices {
+  padding-top: 10vh;
+  padding-bottom: 2vh;
+  min-height: 78vh;
+}
+
+.contact {
+  padding-top: 10vh;
+  min-height: 78vh;
+}
+.galeries,
+.contact,
+.prices {
+  h1 {
+    padding-top: 5%;
+    color: $color3;
+  }
+}
+
+.nav_categories,
+.nav_menu {
+  ul {
+    background-color: $color2;
+    height: 40vh;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  a {
+    text-decoration: none;
+    color: $color1;
+    font-weight: 500;
+    &:hover {
+      animation: 0.2s border 1 both;
+    }
+  }
+  @keyframes border {
+    0% {
+      border-bottom: 1px solid $color3;
+      transform: scale(1);
+    }
+    100% {
+      border-bottom: 3px solid $color3;
+      transform: scale(1.2);
+    }
+  }
+}
+.social {
+  a:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav_menu {
+    width: 60vw;
+    ul {
+      background-color: $color1;
+      height: 10vh;
+    }
+    li {
+      width: 15vw;
+    }
+    a {
+      color: white;
+    }
+  }
+  .nav_categories {
+    width: 100vw;
+    ul {
+      height: 5vh;
+    }
+    li {
+      width: 12vw;
+    }
+  }
+  .galeries,
+  .contact,
+  .prices {
+    h1 {
+      padding-top: 2%;
+      color: $color3;
+    }
+  }
+  .contact {
+    padding-bottom: 2%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .nav_menu,
+  .nav_categories {
+    li {
+      width: 10vw;
+    }
+  }
+}
